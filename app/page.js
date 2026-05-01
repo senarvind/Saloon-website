@@ -75,7 +75,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-16 md:pt-20">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -89,14 +89,14 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+        <div className="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-start md:items-center">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="mt-0 pt-24 md:pt-0"
+            className="mt-0 pt-2 md:pt-0"
           >
-            <h1 className="text-2xl sm:text-5xl md:text-8xl font-bold leading-tight mb-6">
+            <h1 className="text-2xl sm:text-5xl md:text-8xl font-bold leading-tight mb-4 md:mb-6 md:mt-2">
               Lucky Men's <span className="gold-gradient">Parlour</span> Hair Saloon
             </h1>
             <div className="hidden md:block relative h-[150px] w-[400px] mb-8 rounded-2xl overflow-hidden border border-primary/30 shadow-[0_0_20px_rgba(212,175,55,0.1)]">
@@ -108,7 +108,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
-            <div className="md:hidden mt-8 mb-10">
+            <div className="md:hidden mt-4 mb-10">
               <div className="relative w-full max-w-[400px] h-[500px] mx-auto rounded-3xl overflow-hidden border-2 border-primary/30 shadow-[0_0_50px_rgba(212,175,55,0.2)]">
                 <Image
                   src="/arun.png"
