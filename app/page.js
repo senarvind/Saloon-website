@@ -122,20 +122,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button
-                onClick={() => openBookingModal("I would like to book an appointment at Lucky Men's Parlour.")}
-                className="bg-primary hover:bg-primary-hover text-black px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold transition-all flex items-center justify-center sm:justify-start gap-2 text-sm md:text-base shadow-[0_0_20px_rgba(212,175,55,0.3)] hover:scale-105"
-              >
-                Book Appointment <ChevronRight className="hidden md:block w-5 h-5" />
-              </button>
-              <button
-                onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border border-white/20 hover:border-primary px-8 md:px-10 py-3.5 md:py-4 rounded-full font-bold transition-all text-sm md:text-base hover:bg-white/5 text-center"
-              >
-                View Services
-              </button>
-            </div>
           </motion.div>
 
           <motion.div
