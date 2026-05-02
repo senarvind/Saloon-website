@@ -4,10 +4,11 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/public/',
+        disallow: '/api/',
       },
     ],
     sitemap: 'https://saloon-website-fawn.vercel.app/sitemap.xml',
   }
 }
+
 
