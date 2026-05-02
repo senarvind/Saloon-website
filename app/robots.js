@@ -4,7 +4,7 @@ export default function robots() {
       {
         userAgent: '*',
         allow: '/',
-        disallow: '/private/',
+        disallow: '/public/',
       },
     ],
     sitemap: 'https://saloon-website-fawn.vercel.app/sitemap.xml',
