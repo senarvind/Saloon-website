@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata = {
-  title: "Lucky Men's Parlour | Premium Traditional Salon",
+  title: "Lucky Men's Parlour Arun Sen Traditional Salon",
   description: 'Experience the art of grooming with Arun Sen and his expert team.',
 };
 
