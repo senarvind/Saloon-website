@@ -13,6 +13,9 @@ export const metadata = {
   keywords: ["Lucky Men's Parlour", "Arun Sen", "Salon in Prayagraj", "Best Haircut Prayagraj", "Men's Grooming", "Barber Shop Prayagraj", "Traditional Salon"],
   authors: [{ name: "Arun Sen" }],
   creator: "Arun Sen",
+  verification: {
+    google: "luLL7kB4tzv9cUSslFRinRFD0AHsCHSL-3Qbz3IX3t0",
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -20,11 +23,20 @@ export const metadata = {
     title: "Lucky Men's Parlour | Arun Sen | Best Hair Salon in Prayagraj",
     description: "Premium grooming experience by Arun Sen. Traditional cuts and modern styles.",
     siteName: "Lucky Men's Parlour",
+    images: [
+      {
+        url: '/arun.png',
+        width: 800,
+        height: 600,
+        alt: "Lucky Men's Parlour",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Lucky Men's Parlour | Arun Sen",
     description: "Best hair salon in Prayagraj for traditional and modern grooming.",
+    images: ['/arun.png'],
   },
   robots: {
     index: true,
@@ -71,28 +83,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Lucky Men's Parlour - Best Hair Salon in Prayagraj. Expert grooming by Arun Sen." />
-        <meta name="keywords" content="Lucky Men's Parlour, Arun Sen, Salon Prayagraj, Haircut, Grooming" />
-        <meta name="author" content="Arun Sen" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://saloon-website-fawn.vercel.app/" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://saloon-website-fawn.vercel.app/" />
-        <meta property="og:title" content="Lucky Men's Parlour | Best Hair Salon in Prayagraj" />
-        <meta property="og:description" content="Premium grooming experience by Arun Sen. Traditional cuts and modern styles." />
-        <meta property="og:image" content="https://saloon-website-fawn.vercel.app/arun.png" />
-        <meta name="google-site-verification" content="luLL7kB4tzv9cUSslFRinRFD0AHsCHSL-3Qbz3IX3t0" />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body>
+
         <BookingProvider>
           <Navbar />
           <main>{children}</main>
