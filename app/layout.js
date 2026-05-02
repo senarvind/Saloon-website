@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content="Lucky Men's Parlour | Best Hair Salon in Prayagraj" />
         <meta property="og:description" content="Premium grooming experience by Arun Sen. Traditional cuts and modern styles." />
         <meta property="og:image" content="https://saloon-website-fawn.vercel.app/arun.png" />
-        <meta name="google-site-verification" content="ADD_YOUR_CODE_HERE" />
+        <meta name="google-site-verification" content="luLL7kB4tzv9cUSslFRinRFD0AHsCHSL-3Qbz3IX3t0" />
 
         <script
           type="application/ld+json"
