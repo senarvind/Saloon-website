@@ -4,16 +4,78 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 export const metadata = {
-  title: "Lucky Men's Parlour Arun Sen Traditional Salon",
-  description: 'Experience the art of grooming with Arun Sen and his expert team.',
+  metadataBase: new URL('https://saloon-website-fawn.vercel.app'),
+  title: {
+    default: "Lucky Men's Parlour | Arun Sen | Best Hair Salon in Prayagraj",
+    template: "%s | Lucky Men's Parlour"
+  },
+  description: "Experience premium grooming with Arun Sen at Lucky Men's Parlour. Best hair salon in Prayagraj for traditional cuts, beard grooming, facials, and relaxation.",
+  keywords: ["Lucky Men's Parlour", "Arun Sen", "Salon in Prayagraj", "Best Haircut Prayagraj", "Men's Grooming", "Barber Shop Prayagraj", "Traditional Salon"],
+  authors: [{ name: "Arun Sen" }],
+  creator: "Arun Sen",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://saloon-website-fawn.vercel.app/",
+    title: "Lucky Men's Parlour | Arun Sen | Best Hair Salon in Prayagraj",
+    description: "Premium grooming experience by Arun Sen. Traditional cuts and modern styles.",
+    siteName: "Lucky Men's Parlour",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lucky Men's Parlour | Arun Sen",
+    description: "Best hair salon in Prayagraj for traditional and modern grooming.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 import { BookingProvider } from '@/context/BookingContext';
 import BookingModal from '@/components/BookingModal';
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Lucky Men's Parlour",
+    "image": "https://saloon-website-fawn.vercel.app/arun.png",
+    "@id": "https://saloon-website-fawn.vercel.app",
+    "url": "https://saloon-website-fawn.vercel.app",
+    "telephone": "+91 62640 67910",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Main Road, Civil Lines",
+      "addressLocality": "Prayagraj",
+      "addressRegion": "UP",
+      "postalCode": "211001",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "09:00",
+      "closes": "21:00"
+    }
+  };
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         <BookingProvider>
           <Navbar />
